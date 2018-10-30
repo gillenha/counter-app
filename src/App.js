@@ -36,12 +36,7 @@ class App extends Component {
     const count = this.state.counters[index].value - 1;
     counters[index] = { ...counter };
     counters[index].value--;
-
-    if (count < 0) {
-      this.setState({ value: 0 });
-    } else {
-      this.setState({ counters });
-    }
+    this.setState({ counters });
   };
 
   handleReset = () => {
